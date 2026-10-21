@@ -1,0 +1,35 @@
+# Production stack: immutable images, migrations on start, health checks, persistent storage.
+#   cp backend/.env.example backend/.env   # then set ENVIRONMENT=prod, JWT_SECRET_KEY, CORS_ORIGINS, ANTHROPIC_API_KEY
+#   docker compose -f docker-compose.prod.yml up -d --build
+services:
+  api:
+    image: cbnest-api:prod
+    build:
+      context: ./backend
+    env_file:
+      - ./backend/.env
+    environment:
+      ENVIRONMENT: prod
+      DATABASE_URL: sqlite+aiosqlite:///./storage/hrms.db
+    volumes:
+      - hrms-storage:/app/storage
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  web:
+    image: cbnest-web:prod
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+      args:
+        NEXT_PUBLIC_API_BASE_URL: ${PUBLIC_API_BASE_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  hrms-storage:

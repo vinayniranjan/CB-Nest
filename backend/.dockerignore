@@ -1,0 +1,10 @@
+.venv
+.env
+__pycache__
+*.pyc
+.pytest_cache
+tests
+storage/hrms.db
+storage/employee-documents
+storage/profile-photos
+storage/hr-policies/seed_policy_*.md
