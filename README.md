@@ -4,9 +4,11 @@
 
 **CB Nest** is a full-stack HR Management System (FastAPI + Next.js + SQLite). This repository extends it with the **PeopleOps Copilot**, a set of AI features that let employees, managers and admins work with HR policies, HR data and HR tasks in natural language, without bypassing the HRMS's security model.
 
-> 🎥 **Demo video:** [demo/cbnest_copilot_demo.mp4](demo/cbnest_copilot_demo.mp4) (3 min 23 s, Employee → Manager → Admin, on-screen captions) · [demo page with chapters](https://claude.ai/artifact/FTges72KS9VAW2NCTEH2Gb). The recording is reproducible with `python e2e/copilot_e2e.py`.
+> 🎥 **Demo video:** https://github.com/vinayniranjan/CB-Nest/blob/main/demo/cbnest_copilot_demo.mp4
+>
+> 3 min 23 s, Employee → Manager → Admin, with on-screen captions. The recording is reproducible with `python e2e/copilot_e2e.py`.
 
-[![Demo video](demo/poster.jpg)](demo/cbnest_copilot_demo.mp4)
+[![Demo video](demo/poster.jpg)](https://github.com/vinayniranjan/CB-Nest/blob/main/demo/cbnest_copilot_demo.mp4)
 
 [![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
 

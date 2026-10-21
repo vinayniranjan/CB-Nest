@@ -1,5 +1,7 @@
 # Documentation
 
+🎥 **Demo video:** https://github.com/vinayniranjan/CB-Nest/blob/main/demo/cbnest_copilot_demo.mp4
+
 | Document | Audience | Contents |
 |---|---|---|
 | [AI architecture](ai_architecture.md) | Engineers, reviewers | Architecture diagram, request flows (sequence diagrams), components, model/provider, endpoint contracts, security and design decisions, known limitations |
